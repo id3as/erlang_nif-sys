@@ -208,7 +208,7 @@ pub enum ErlNifCharEncoding {
 #[derive(Debug, Copy, Clone)]
 #[repr(C)]
 pub struct ErlNifPid {
-    pid: ERL_NIF_TERM,
+    pub pid: ERL_NIF_TERM,
 }
 
 /// See [ErlNifSysInfo](http://www.erlang.org/doc/man/erl_nif.html#ErlNifSysInfo) in the Erlang docs.
@@ -378,4 +378,3 @@ macro_rules! nif_init {
         }
     )
 }
-
