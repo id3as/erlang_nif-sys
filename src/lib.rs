@@ -138,6 +138,8 @@ pub type ERL_NIF_TERM = ERL_NIF_UINT;
 #[repr(C)]
 pub struct ErlNifEnv {dummy:c_int}
 
+unsafe impl Send for ErlNifEnv {}
+
 /// See [ErlNifFunc](http://www.erlang.org/doc/man/erl_nif.html#ErlNifFunc) in the Erlang docs.
 // #[allow(missing_copy_implementations)]
 #[repr(C)]
